@@ -1,0 +1,113 @@
+.nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-item {
+    padding: 10px;
+    border-radius: 46px;
+    font-size: 2em;
+}
+
+#navbarDropdown,#onubasushilog,#servicioadomicilio,#ofertasespeciales{
+    color: white;
+    transition: color 0.3s;
+}
+#navbarDropdown:hover,#servicioadomicilio:hover,#ofertasespeciales:hover {
+    color: red;
+}
+
+.navbar-brand {
+    position: relative;
+    color: #fff; /* Color del texto */
+    padding: 15px 20px;
+    font-size: 24px; /* Tamaño del texto */
+    font-weight: bold; /* Peso de la fuente */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Para aplicar border-radius correctamente */
+    border: 2px solid #fff; /* Borde blanco */
+    background-color: white;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.navbar-brand::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #fff;
+    background-color: #FF0000;
+    z-index: -1;
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1); 
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+
+
+.navbar-toggler.btn-light {
+    background-color: white;
+}
+
+.navbar-toggler.btn-light:hover {
+    background-color: red; 
+}
+
+
+
+/*------------------- Galeria ---------------------*/
+
+.galeria-btn{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.ajustes-tamano{ /*para la ventana del video principal y la imagenes que se coloquen*/
+    max-width: 80%;
+    max-height: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.ajustes-tamano-miniatura{
+    max-width: 15%;
+    /*max-height: 700px*/
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.img-thumbnail {
+    transition: transform 0.5s ease-in-out;
+}
+
+.img-thumbnail:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.btn-outline-primary {
+    margin: 5px 0;
+    border-width: 2px;
+    transition: all 0.3s;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+    background-color: #022873;
+    color: white;
+}

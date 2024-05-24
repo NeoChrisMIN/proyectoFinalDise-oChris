@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+:root{
+    --color0:#FFFFFF;
+    --color1:#022873;
+    --color2:#3365A6;
+    --color3:#52A8F2;
+    --color4:#6CA6D9;
+    --color5:#A0DBF2;
+} 
+
+/* Color Theme Swatches in Hex */
+.mi-color0 { background-color: var(--color0);  }
+.mi-color1 { background-color: var(--color1);  }
+.mi-color2 { background-color: var(--color2);  }
+.mi-color3 { background-color: var(--color3);  }
+.mi-color4 { background-color: var(--color4);  }
+.mi-color5 { background-color: var(--color5);  }
+
+/* general ------------------------------------------------------------------------------------- */
+
+body {
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--color1);
+    /* align-items: center; */
+}
+
+#seccion1{
+    background-color: var(--color4);
+}
+
+#seccion4{
+    padding-bottom: 10px;
+}
+
+.seccion{
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 50px;
+}
+
+
+header {
+    background-color: var(--color1);
+    display: flex;
+    justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    align-self: center;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+input {
+    width: 100%;
+}
+
+.tituloSeccion{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 10px;
+    margin-top: 8px;
+}
+
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Canvas */
+canvas {
+    width: 100%;
+    height: auto; 
+    border: 4px solid #022873;
+    background-color: var(--color0); 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mapa */
+.mi-mapa{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /*width="600" height="450"*/
+}
+
+#texto-ubicacion{
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* redes sociales */
+.bolita{
+    width: 30px;
+    height: 30px;
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #022873;  
+    transition: transform 0.3s ease;
+    background-color: var(--color0);
+}
+
+.texto-enlace{
+    color: var(--color0);
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/*Formulario*/
+#contenedor-formulario{
+    border-radius: 2%;
+}
+
+/* grid */
+
+.gridImagenes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.imagenGrid {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #022873;  
+    transition: transform 0.3s ease;
+}
+
+.imagenGrid:hover {
+    transform: scale(1.05);
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px; /* Bordes redondos */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px; /* Espaciado interno */
+    transition: transform 0.3s ease;
+    border: 2px solid #022873;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px); /* Efecto de elevación al hover */
+}
+
+.leer-mas-checkbox:checked + .texto-completo {
+    display: block;
+}
+
+/* Cards -------------------------------------------------------------------------------- */
+
+.card{
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-animacion-activo{
+    animation: tiltAnimation 2s infinite;
+}
+@keyframes tiltAnimation {
+    0% {
+        transform: rotate(-3deg); /* Inclinación hacia la izquierda */
+    }
+    50% {
+        transform: rotate(3deg); /* Inclinación hacia la derecha */
+    }
+    100% {
+        transform: rotate(-3deg); /* Regresar a la inclinación inicial */
+    }
+}
+
+.textoExplicativo{
+    font-weight: bold; /* Hace que el texto sea negrita */
+    margin-top: 10px;
+}
+
+
+/* Seccion información*/
+.imagenLogo{
+    max-width: 100px;
+    /*clip-path: polygon(50% 0%, 78% 21%, 94% 50%, 78% 79%, 50% 100%, 21% 79%, 6% 50%, 21% 21%, 50% 0%, 78% 21%);*/
+    clip-path: circle(50% at 50% 50%);
+    margin-top: 20px;
+}
+
+
+/* Los media | que sirven para personalizar los componentes segun el tamaño de pantalla */
+@media (max-width: 1200px) {
+    header {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 1543px) {
+    .gridImagenes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1288px) {
+
+
+    #carouselportada {
+        width: 500px;
+    }
+
+
+    .gridImagenes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .imagenGrid {
+        width: 200px;
+        height: 200px;
+    }
+
+    .card{
+        max-width: 200px;
+    }
+}
+
+
+@media (max-width: 650px) {
+    .gridImagenes {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .imagenGrid {
+        width: 200px;
+        height: 200px;
+    }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="accordion" id="miAccordion">
+        <!-- 1 -->
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Musica tematica
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#miAccordion">
+                <div class="card-body">
+                    
+                    <h2 class="card-title">LEVAN POLKA</h2>
+                    <audio controls class="mb-3">
+                        <source src="sonido/La canción más pegadiza del mundo ( LEVAN POLKA).mp3" type="audio/mp3">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Descripción del cosplayer
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#miAccordion">
+                <div class="card-body">
+                    
+                    <p>Cosplay de: Miku Hatsune |Vocaloid</p>
+                      <div>
+                        <p>🍡 Cosplayer and cosmaker</p>
+                        <p>🍡 Bull terrier mom</p>
+                        <p>🍡 Vtubers lovers </p>
+                        <p>📍  Andalusian </p>
+                      </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Foto del cosplayer
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#miAccordion">
+                <div class="card-body">
+                    
+                    <img src="images/jueces/dereia_cosplay.png" class="img-fluid" alt="Imagen del audio">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
+<!-- columna con los botones -->
+<nav class="">
+    <ul class="nav justify-content-center w-100">
+        <li class="nav-item">
+            <button class="btn btn-outline-primary galeria-btn" data-year="2008">2008</button>
+        </li>
+        <li class="nav-item">
+            <button class="btn btn-outline-primary galeria-btn" data-year="2012">2012</button>
+        </li>
+        <li class="nav-item">
+            <button class="btn btn-outline-primary galeria-btn" data-year="2016">2016</button>
+        </li>
+    </ul>
+  </nav>
+
+  <!-- columna con los botones -->
+  <main role="main" class="">
+    <div id="visor-principal" class="mt-4" >
+        <video id="video-principal" controls class="d-block mx-auto video-responsive ajustes-tamano">
+            <source src="videos/videosalonmanga.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    </div>
+    <div id="miniaturas" class="mt-4 d-flex justify-content-center flex-wrap">
+        <!-- las miniaturas se cargan aquí -->
+    </div>
+  </main>
